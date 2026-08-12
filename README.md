@@ -45,7 +45,7 @@ Built solo in a week with WinUI 3 / Windows App SDK. No telemetry, no bundled ju
 
 ## Installation
 
-1. Go to [Releases](../../releases) and download the latest `WinVoraSetup-x.x.x.exe`
+1. Go to [Releases](../../releases) and download the latest `WinVora-Setup-x.x.x.exe`
 2. Run the installer
 
 > **⚠️ Windows SmartScreen warning:** This installer isn't code-signed (that costs money I haven't put into this hobby project yet), so Windows may show a blue "Windows protected your PC" screen on first run. Click **"More info" → "Run anyway"** to continue. This is expected and not a sign of anything malicious — the source is right here in this org if you want to check for yourself.
