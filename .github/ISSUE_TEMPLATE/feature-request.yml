@@ -1,0 +1,40 @@
+name: Feature request
+description: Suggest a new feature or improvement for WinVora.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem should this solve?
+      description: Explain when this feature would be useful.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Suggested solution
+      description: Describe how you would like the feature to work.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Dashboard
+        - System information
+        - Program updates
+        - File cleanup
+        - Uninstaller
+        - Startup apps
+        - History
+        - Settings
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add mockups, examples, or other useful details here.
