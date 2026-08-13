@@ -1,101 +1,117 @@
+<div align="center">
+
 # WinVora
 
-A modern, Windows 11-style system utility app — live hardware monitoring, storage cleanup, app updates, and program management in one clean, fast tool.
+**Windows einfacher aktualisieren, aufräumen und im Blick behalten.**
 
-Built solo in a week with WinUI 3 / Windows App SDK. No telemetry, no bundled junk, no "one-click optimize everything" snake oil — just the tools, and you decide what to run.
+[![Aktuelle Version](https://img.shields.io/github/v/release/WinVora/WinVora-Releases?style=for-the-badge&color=7c5cff&label=Version)](https://github.com/WinVora/WinVora-Releases/releases/latest)
+[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-7c5cff?style=for-the-badge&logo=windows11)](#systemanforderungen)
+[![Sprachen](https://img.shields.io/badge/Sprachen-Deutsch%20%7C%20English-7c5cff?style=for-the-badge)](#)
 
-![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-blue)
-![Status](https://img.shields.io/badge/status-early--stage-orange)
-![Language](https://img.shields.io/badge/UI-English%20%2F%20Deutsch-lightgrey)
+[**WinVora herunterladen**](https://github.com/WinVora/WinVora-Releases/releases/latest) · [Quellcode ansehen](https://github.com/WinVora/WinVora) · [Problem melden](https://github.com/WinVora/WinVora-Releases/issues)
 
+</div>
 
-## Features
+WinVora bündelt wichtige Windows-Werkzeuge in einer übersichtlichen App. Programme aktualisieren, Speicher freigeben, Autostarts verwalten und Systeminformationen prüfen – ohne sich durch verschiedene Windows-Menüs oder technische Konsolen arbeiten zu müssen.
 
-### 📊 Live Dashboard
-- Real-time CPU, RAM, and GPU usage
-- CPU/GPU temperature (via LibreHardwareMonitor, where supported by your hardware)
-- Mini history charts for CPU/RAM/GPU (last 30 samples)
-- Storage overview, installed program count, last cleanup time, available Winget updates — all at a glance
-- Recent activity log (cleanups, updates, uninstalls)
+## Ein erster Blick
 
-### 🧹 Storage Cleanup
-- 20 categories: temp files, browser cache, thumbnail cache, Windows Update cache, old Windows.old installs, crash dumps, error reports, and more
-- Per-category or bulk cleanup, with size shown before you delete anything
-- Categories that need admin rights are clearly marked and handled via a single UAC prompt, not one per item
+![WinVora Dashboard](screenshots/dashboard.png)
 
-### 📦 App Updates (Winget)
-- Scans installed packages via `winget` and shows available updates
-- Select which apps to update, or update everything at once
-- Live progress per package
+<table>
+  <tr>
+    <td width="50%"><img src="screenshots/updates.png" alt="Programm-Updates in WinVora"></td>
+    <td width="50%"><img src="screenshots/files.png" alt="Dateibereinigung in WinVora"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Programm-Updates</b></td>
+    <td align="center"><b>Dateibereinigung</b></td>
+  </tr>
+</table>
 
-### 🗑 Program Uninstaller
-- Full list of installed programs with real extracted icons
-- Search/filter, one-click uninstall
+![Systeminformationen in WinVora](screenshots/system-info.png)
 
-### 🎨 Design
-- Windows 11 Fluent Design: Mica backdrop, rounded cards, soft shadows, accent-colored hover states
-- Dark and light mode
-- Fully bilingual: **English and German**, switchable anytime in Settings (also asked on first launch)
+## Was WinVora kann
 
-### 🔄 Auto-Update
-- Checks GitHub Releases in the background
-- One click to download and install the latest version — WinVora restarts itself automatically
+### Programme aktuell halten
 
----
+- Verfügbare Updates übersichtlich anzeigen und gemeinsam installieren
+- Aktuelle und neue Version, Größe, Herausgeber und Installationsquelle einsehen
+- Einzelne Programme dauerhaft ignorieren oder später aktualisieren
+- Download-, Installations- und Abschlussstatus verständlich verfolgen
+- Fehlgeschlagene Updates einzeln erneut versuchen
+- Neustarts möglichst unterdrücken und als „Neustart erforderlich“ melden
+
+### Windows aufräumen
+
+- Temporäre Dateien, System-Caches, Fehlerberichte und Browserdaten untersuchen
+- Erwarteten Speichergewinn vor dem Löschen anzeigen
+- Empfindliche Bereiche klar kennzeichnen und gesondert absichern
+- Nur die gewünschten Kategorien auswählen und kontrolliert bereinigen
+
+### System verstehen
+
+- CPU, RAM, GPU, Laufwerke, Netzwerk und Windows-Daten anzeigen
+- Defender, Firewall, TPM und Secure Boot getrennt prüfen
+- Systeminformationen kopieren und als Bericht exportieren
+- Veränderungen seit der letzten Prüfung erkennen
+- Ungewöhnlich stark wachsende Programme oder Ordner sichtbar machen
+
+### Programme verwalten
+
+- Installierte Programme suchen, exportieren und deinstallieren
+- Autostart-Einträge aktivieren oder deaktivieren
+- Update- und Aktivitätsverlauf mit verständlichen Ergebnissen durchsuchen
+- Einstellungen, Diagnoseberichte und Sicherungen exportieren
 
 ## Installation
 
-1. Go to [Releases](../../releases) and download the latest `WinVora-Setup-x.x.x.exe`
-2. Run the installer
+1. Öffne die Seite [**Neueste Version**](https://github.com/WinVora/WinVora-Releases/releases/latest).
+2. Lade die Datei `WinVora-Setup-x.x.x.exe` herunter.
+3. Starte den Installer und folge den angezeigten Schritten.
 
-> **⚠️ Windows SmartScreen warning:** This installer isn't code-signed (that costs money I haven't put into this hobby project yet), so Windows may show a blue "Windows protected your PC" screen on first run. Click **"More info" → "Run anyway"** to continue. This is expected and not a sign of anything malicious — the source is right here in this org if you want to check for yourself.
+WinVora enthält keine zusätzliche Software und keine Werbung. Administratorrechte werden nur angefordert, wenn Windows sie für eine ausgewählte Aktion benötigt.
 
-### Requirements
-- Windows 10 (version 2004 / build 19041) or Windows 11
-- 64-bit (x64)
+> **Hinweis zu Windows SmartScreen:** Der Installer ist derzeit noch nicht mit einem kostenpflichtigen Code-Signing-Zertifikat signiert. Deshalb kann Windows beim ersten Start „Unbekannter Herausgeber“ anzeigen. Lade WinVora ausschließlich aus diesem offiziellen Repository herunter.
 
----
+## Sicherheit und Datenschutz
 
-## Why no admin rights by default?
+- Keine Telemetrie und kein Verkauf persönlicher Daten
+- Keine versteckten Hintergrundinstallationen
+- Lösch- und Deinstallationsaktionen werden vom Nutzer ausgelöst
+- Technische Diagnoseberichte können vor dem Speichern geprüft werden
+- Persönliche Angaben werden im Supportbericht anonymisiert
+- Der Quellcode ist öffentlich einsehbar
 
-WinVora runs as a normal user. A handful of storage categories (like `Windows.old` or upgrade logs) are owned by `TrustedInstaller` and genuinely need elevation — for those specific items only, WinVora asks for a single UAC confirmation instead of requiring the whole app to run as admin all the time.
+### Download optional überprüfen
 
-## Known limitations
+Zu jedem Installer wird eine kleine `.sha256.txt`-Datei angeboten. Sie ist für die Installation nicht erforderlich, ermöglicht aber eine unabhängige Prüfung des Downloads:
 
-- GPU usage and temperature depend on [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) support for your specific hardware. If your GPU isn't supported, those fields will honestly show "Not available" instead of a fake number.
-- Some sensors (especially temperatures) may only report correctly when run elevated, depending on your system.
+```powershell
+Get-FileHash .\WinVora-Setup-x.x.x.exe -Algorithm SHA256
+```
 
----
+Der angezeigte Hash muss mit dem Inhalt der zugehörigen `.sha256.txt`-Datei übereinstimmen.
 
-## Feedback & Bug Reports
+## Systemanforderungen
 
-This is a very young project (started this week) built by one person, so things *will* break. If they do:
+- Windows 10 ab Version 2004 oder Windows 11
+- 64-Bit-System
+- WinGet für Programm-Updates
+- Internetverbindung für Updateprüfungen und Downloads
 
-- Open an [Issue](../../issues) with what happened, your Windows version, and (if possible) the log file from `%LOCALAPPDATA%\WinVora\log.txt`
-- Or just comment wherever you found this — I read everything
+Die übrigen Bereiche von WinVora können auch ohne Internetverbindung verwendet werden.
 
-Feature suggestions are welcome too.
+## Hilfe und Rückmeldungen
 
-## Roadmap (ideas, not promises)
+Du hast einen Fehler gefunden oder eine Idee für WinVora? Erstelle ein [GitHub-Issue](https://github.com/WinVora/WinVora-Releases/issues) und beschreibe möglichst genau, was passiert ist.
 
-- Autostart manager (see/disable startup programs, estimated impact)
-- Scheduled/automatic cleanup scans
-- System tray support
-- Keyboard shortcuts
-
----
-
-## Built with
-
-- [WinUI 3](https://learn.microsoft.com/windows/apps/winui/winui3/) / Windows App SDK
-- [CommunityToolkit.WinUI](https://github.com/CommunityToolkit/Windows)
-- [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) — GPU/temperature sensor readings
-- Winget (Windows Package Manager) for app updates
-
-## Support
-
-If you'd like to support the project: [ko-fi.com/winvora](https://ko-fi.com/winvora)
+Wenn dir WinVora gefällt und du die Weiterentwicklung unterstützen möchtest, kannst du das Projekt auch über [Ko-fi](https://ko-fi.com/winvora) unterstützen.
 
 ---
 
-*This is an independent hobby project and is not affiliated with Microsoft.*
+<div align="center">
+
+Entwickelt für Windows-Nutzer, die ihr System ohne unnötige Komplexität verwalten möchten.
+
+</div>
