@@ -1,0 +1,52 @@
+name: False positive or SmartScreen report
+description: Report a Defender, SmartScreen, or antivirus warning involving WinVora.
+title: "[Security warning]: "
+labels: ["false positive"]
+body:
+  - type: input
+    id: app-version
+    attributes:
+      label: WinVora version
+      placeholder: 0.8.4
+    validations:
+      required: true
+  - type: dropdown
+    id: protection
+    attributes:
+      label: Protection feature
+      options:
+        - Microsoft Defender Antivirus
+        - Microsoft Defender SmartScreen
+        - Smart App Control
+        - Third-party antivirus
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: detection
+    attributes:
+      label: Detection or warning name
+      description: Enter the exact name or message shown by Windows or the antivirus program.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Download source and affected file
+      description: Confirm where the file was downloaded and provide its filename. Do not post suspicious third-party download links.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+      description: You may attach a screenshot after removing personal information.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmation
+      options:
+        - label: I downloaded WinVora from the official WinVora GitHub repository.
+          required: true
+        - label: I removed personal information from screenshots and logs.
+          required: true
