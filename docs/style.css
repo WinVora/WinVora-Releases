@@ -20,7 +20,7 @@ img { display: block; max-width: 100%; }
 
 .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
 .brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 750; font-size: 18px; }
-.brand-mark { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; background: linear-gradient(145deg, #0d0d10 48%, #39383e 49%); box-shadow: 0 0 0 1px #45424f, 0 0 28px #7655ff38; font-weight: 800; }
+.brand-logo { width: 34px; height: 34px; display: block; border-radius: 9px; box-shadow: 0 0 24px #7655ff2e; }
 nav { display: flex; align-items: center; gap: 28px; }
 nav a { color: var(--muted); font-size: 14px; font-weight: 600; }
 nav a:hover { color: var(--text); }
@@ -42,8 +42,8 @@ h1 span, h2 span { color: var(--purple-light); }
 .small { font-size: 13px !important; color: #777481 !important; }
 .hero-art { min-height: 420px; position: relative; display: grid; place-items: center; }
 .glow { position: absolute; width: 370px; height: 370px; border-radius: 50%; background: #6d48ff; filter: blur(100px); opacity: .22; }
-.app-icon { position: relative; width: min(310px, 70vw); aspect-ratio: 1; border-radius: 28%; display: grid; place-items: center; background: linear-gradient(153deg, #0b0b0e 48%, #3c3b40 49%); border: 1px solid #4c4956; box-shadow: 0 28px 80px #000, 0 0 55px #6846e24d; transform: rotate(-2deg); }
-.app-icon span { font-size: 150px; line-height: 1; font-weight: 800; }
+.app-icon { position: relative; width: min(310px, 70vw); aspect-ratio: 1; filter: drop-shadow(0 28px 48px #000) drop-shadow(0 0 28px #6846e24d); transform: rotate(-2deg); }
+.app-icon img { width: 100%; height: 100%; object-fit: contain; }
 
 .trust { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
 .trust div { padding: 26px 30px; }
@@ -93,7 +93,7 @@ footer a:hover { color: white; }
   .hero .actions { justify-content: center; }
   .hero-art { min-height: 330px; }
   .app-icon { width: 240px; }
-  .app-icon span { font-size: 115px; }
+
   .trust, .feature-grid { grid-template-columns: 1fr; }
   .trust div + div { border-left: 0; border-top: 1px solid var(--line); }
   .screenshot-grid, .security { grid-template-columns: 1fr; }
