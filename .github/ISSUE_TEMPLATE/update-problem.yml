@@ -1,0 +1,46 @@
+name: Update problem
+description: Report a problem while searching for or installing a program update.
+title: "[Update]: "
+labels: ["update problem"]
+body:
+  - type: input
+    id: app-version
+    attributes:
+      label: WinVora version
+      placeholder: 0.8.4
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2, build 26100
+    validations:
+      required: true
+  - type: input
+    id: program
+    attributes:
+      label: Affected program
+      placeholder: Program name and package ID, if available
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Update result
+      description: Include the displayed WinVora message and error code, if available.
+    validations:
+      required: true
+  - type: textarea
+    id: retry
+    attributes:
+      label: What happened when you tried again?
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I confirmed that the internet connection works.
+        - label: I tried updating the program directly or through WinGet.
+        - label: I removed personal information from logs and screenshots.
+          required: true
