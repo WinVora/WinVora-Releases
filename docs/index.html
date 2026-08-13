@@ -23,7 +23,10 @@
       <a href="#security">Security</a>
       <a class="nav-download" href="https://github.com/WinVora/WinVora-Releases/releases/latest">Download</a>
     </nav>
-  </header>
+    <div class="language-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="de" aria-label="Deutsch auswählen">DE</button>
+      <button type="button" data-lang="en" aria-label="Select English">EN</button>
+    </div>  </header>
 
   <main id="top">
     <section class="hero shell">
@@ -120,5 +123,66 @@
     <p>Independent open-source software. Not affiliated with Microsoft.</p>
     <div><a href="https://github.com/WinVora/WinVora-Source">Source</a><a href="https://github.com/WinVora/WinVora-Releases">Releases</a><a href="mailto:winvoraadmin@gmail.com">Contact</a><a href="https://ko-fi.com/winvora">Ko-fi</a></div>
   </footer>
-</body>
+  <script>
+    (() => {
+      const de = {
+        "Features": "Funktionen", "Screenshots": "Screenshots", "Security": "Sicherheit", "Download": "Download",
+        "FREE · OPEN SOURCE · WINDOWS 10 & 11": "KOSTENLOS · OPEN SOURCE · WINDOWS 10 & 11",
+        "Windows maintenance,": "Windows-Wartung,", "made simple.": "einfach gemacht.",
+        "Keep programs updated, free up storage, inspect your system, and manage startup apps from one clean Windows utility.": "Halte Programme aktuell, gib Speicherplatz frei, prüfe dein System und verwalte Autostart-Apps mit einem übersichtlichen Windows-Werkzeug.",
+        "Download WinVora": "WinVora herunterladen", "View source code": "Quellcode ansehen",
+        "Latest version: 0.8.4 · English and German · x64": "Aktuelle Version: 0.8.4 · Deutsch und Englisch · x64",
+        "No telemetry": "Keine Telemetrie", "Your system data stays on your PC.": "Deine Systemdaten bleiben auf deinem PC.",
+        "No bundled software": "Keine Zusatzsoftware", "Only WinVora is installed.": "Es wird ausschließlich WinVora installiert.",
+        "Transparent": "Transparent", "Source code and checksums are public.": "Quellcode und Prüfsummen sind öffentlich.",
+        "EVERYTHING IN ONE PLACE": "ALLES AN EINEM ORT", "Useful tools without the clutter": "Nützliche Werkzeuge ohne unnötigen Ballast",
+        "WinVora explains what is happening and keeps you in control of every action.": "WinVora erklärt verständlich, was passiert, und gibt dir bei jeder Aktion die Kontrolle.",
+        "Program updates": "Programm-Updates", "Find and install WinGet updates with clear versions, progress, results, and retry options.": "Finde und installiere WinGet-Updates mit klaren Versionsangaben, Fortschritt, Ergebnissen und Wiederholungsoptionen.",
+        "Storage cleanup": "Speicherbereinigung", "See the expected storage gain and safety level before selecting anything for deletion.": "Sieh vor dem Löschen den erwarteten Speichergewinn und die Sicherheitsstufe.",
+        "System information": "Systeminformationen", "Review hardware, Windows, network, drives, TPM, Secure Boot, Defender, and Firewall.": "Prüfe Hardware, Windows, Netzwerk, Laufwerke, TPM, Secure Boot, Defender und Firewall.",
+        "Startup apps": "Autostart-Apps", "Understand and manage programs that launch automatically with Windows.": "Verstehe und verwalte Programme, die automatisch mit Windows starten.",
+        "Program management": "Programmverwaltung", "Search installed software, export program lists, and start uninstallers from one place.": "Durchsuche installierte Software, exportiere Programmlisten und starte Deinstallationen an einem Ort.",
+        "PC changes": "PC-Veränderungen", "See newly installed or removed programs, startup changes, and unusual storage growth.": "Erkenne neu installierte oder entfernte Programme, Autostart-Änderungen und ungewöhnliches Speicherwachstum.",
+        "DESIGNED FOR WINDOWS": "FÜR WINDOWS ENTWICKELT", "Clear in dark and light mode": "Übersichtlich im dunklen und hellen Modus",
+        "A modern WinUI 3 interface that keeps the important information readable.": "Eine moderne WinUI-3-Oberfläche, die wichtige Informationen gut lesbar darstellt.",
+        "Dashboard": "Dashboard", "File cleanup": "Dateibereinigung",
+        "BUILT WITH TRANSPARENCY": "TRANSPARENT ENTWICKELT", "You decide what WinVora does": "Du entscheidest, was WinVora macht",
+        "Cleanup, updates, and uninstall actions only run after you select them. Administrator access is requested only when Windows requires it for that specific action.": "Bereinigungen, Updates und Deinstallationen werden nur nach deiner Auswahl ausgeführt. Administratorrechte werden nur angefordert, wenn Windows sie für die jeweilige Aktion benötigt.",
+        "Public source code under the MIT License": "Öffentlicher Quellcode unter der MIT-Lizenz", "SHA-256 checksum with every installer": "SHA-256-Prüfsumme für jeden Installer",
+        "No advertising, telemetry, or hidden installs": "Keine Werbung, Telemetrie oder versteckten Installationen", "Diagnostic reports can be reviewed before saving": "Diagnoseberichte können vor dem Speichern geprüft werden",
+        "About SmartScreen": "Über SmartScreen", "WinVora is a solo open-source project and the installer is not yet code-signed with a paid certificate. Windows may therefore show an “Unknown publisher” message.": "WinVora ist ein unabhängiges Open-Source-Projekt und der Installer ist noch nicht mit einem kostenpflichtigen Zertifikat signiert. Windows kann deshalb „Unbekannter Herausgeber“ anzeigen.",
+        "Only download WinVora from the official GitHub release page. The optional checksum lets you verify the installer independently.": "Lade WinVora ausschließlich von der offiziellen GitHub-Release-Seite herunter. Mit der optionalen Prüfsumme kannst du den Installer unabhängig überprüfen.",
+        "Ready to try WinVora?": "Bereit, WinVora auszuprobieren?", "Download the latest release and tell me what should improve next.": "Lade die aktuelle Version herunter und sag mir, was als Nächstes verbessert werden soll.",
+        "Download latest release": "Aktuelle Version herunterladen", "Send feedback": "Feedback senden",
+        "Independent open-source software. Not affiliated with Microsoft.": "Unabhängige Open-Source-Software. Keine Verbindung zu Microsoft.",
+        "Source": "Quellcode", "Releases": "Versionen", "Contact": "Kontakt"
+      };
+      const title = { en: "WinVora — Windows maintenance made simple", de: "WinVora — Windows-Wartung einfach gemacht" };
+      const nodes = [];
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      while (walker.nextNode()) {
+        const node = walker.currentNode;
+        const value = node.nodeValue.trim();
+        if (value) nodes.push({ node, value });
+      }
+      function setLanguage(lang) {
+        const selected = lang === "de" ? "de" : "en";
+        document.documentElement.lang = selected;
+        document.title = title[selected];
+        nodes.forEach(({ node, value }) => {
+          const before = node.nodeValue.match(/^\s*/)[0];
+          const after = node.nodeValue.match(/\s*$/)[0];
+          node.nodeValue = before + (selected === "de" && de[value] ? de[value] : value) + after;
+        });
+        document.querySelectorAll("[data-lang]").forEach(button => {
+          const active = button.dataset.lang === selected;
+          button.classList.toggle("active", active);
+          button.setAttribute("aria-pressed", String(active));
+        });
+        localStorage.setItem("winvora-language", selected);
+      }
+      document.querySelectorAll("[data-lang]").forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.lang)));
+      setLanguage(localStorage.getItem("winvora-language") || "en");
+    })();
+  </script></body>
 </html>
