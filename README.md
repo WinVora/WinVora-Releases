@@ -8,7 +8,7 @@
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-7c5cff?style=for-the-badge&logo=windows11)](#system-requirements)
 [![Languages](https://img.shields.io/badge/Languages-English%20%7C%20German-7c5cff?style=for-the-badge)](#)
 
-[**Download WinVora**](https://github.com/WinVora/WinVora-Releases/releases/latest) · [View Source Code](https://github.com/WinVora/WinVora) · [Report an Issue](https://github.com/WinVora/WinVora-Releases/issues)
+[**Download WinVora**](https://github.com/WinVora/WinVora-Releases/releases/latest) · [View Source Code](https://github.com/WinVora/WinVora-Source) · [Report an Issue](https://github.com/WinVora/WinVora-Releases/issues)
 
 </div>
 
