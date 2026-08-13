@@ -106,6 +106,8 @@ The remaining areas of WinVora can also be used without an internet connection.
 
 Found a bug or have an idea for WinVora? Create a [GitHub issue](https://github.com/WinVora/WinVora-Releases/issues) and describe what happened in as much detail as possible.
 
+You can also contact the WinVora team directly by email at [winvoraadmin@gmail.com](mailto:winvoraadmin@gmail.com).
+
 If you enjoy using WinVora and would like to support its continued development, you can support the project on [Ko-fi](https://ko-fi.com/winvora).
 
 ---
