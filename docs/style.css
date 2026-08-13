@@ -138,3 +138,7 @@ footer a:hover { color: white; }
 @media (min-width: 851px) {
   .hero { min-height: 570px; }
 }
+@media (max-width: 620px) {
+  footer .brand-logo { width: 24px; height: 24px; border-radius: 6px; box-shadow: none; }
+  footer .brand { gap: 8px; font-size: 15px; }
+}
