@@ -142,3 +142,14 @@ footer a:hover { color: white; }
   footer .brand-logo { width: 24px; height: 24px; border-radius: 6px; box-shadow: none; }
   footer .brand { gap: 8px; font-size: 15px; }
 }
+footer .brand-logo {
+  width: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  max-height: 20px !important;
+  flex: 0 0 20px !important;
+  border-radius: 5px;
+  box-shadow: none;
+}
