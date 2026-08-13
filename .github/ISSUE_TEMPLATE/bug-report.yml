@@ -1,0 +1,51 @@
+name: Bug report
+description: Report something that is not working correctly in WinVora.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve WinVora. Do not include passwords, serial numbers, usernames, or other private information.
+  - type: input
+    id: app-version
+    attributes:
+      label: WinVora version
+      placeholder: 0.8.4
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2, build 26100
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the actual behavior and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open ...\n2. Select ...\n3. Click ..."
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant error message or log excerpt
+      description: Remove personal information before pasting logs.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I am using the latest WinVora release.
+          required: true
+        - label: I removed personal information from screenshots and logs.
+          required: true
