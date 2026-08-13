@@ -130,3 +130,11 @@ footer a:hover { color: white; }
   .hero-art { display: none; }
   .hero { min-height: auto; padding-block: 64px 78px; }
 }
+/* Keep the official mark only in the footer. */
+.nav > .brand .brand-logo { display: none; }
+.hero { grid-template-columns: minmax(0, 900px); justify-content: center; }
+.hero-copy { width: 100%; }
+.hero-art { display: none; }
+@media (min-width: 851px) {
+  .hero { min-height: 570px; }
+}
