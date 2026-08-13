@@ -111,3 +111,14 @@ footer a:hover { color: white; }
   .cta { padding: 28px; }
   footer > div:last-child { flex-wrap: wrap; }
 }
+
+.language-switch { display: inline-flex; gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.language-switch button { min-width: 38px; height: 32px; padding: 0 9px; border: 0; border-radius: 7px; background: transparent; color: var(--muted); font: inherit; font-size: 12px; font-weight: 750; cursor: pointer; transition: color .16s ease, background-color .16s ease; }
+.language-switch button:hover { color: var(--text); }
+.language-switch button.active { color: white; background: var(--purple); }
+@media (max-width: 620px) {
+  .nav { gap: 10px; }
+  .nav nav { margin-left: auto; }
+  .nav-download { padding-inline: 11px; }
+  .language-switch button { min-width: 34px; padding-inline: 7px; }
+}
