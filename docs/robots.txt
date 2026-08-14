@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://winvora.github.io/WinVora-Releases/sitemap.xml
